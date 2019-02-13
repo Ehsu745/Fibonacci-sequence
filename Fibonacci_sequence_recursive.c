@@ -1,19 +1,16 @@
 #include <stdio.h>
 
-int		main ()
+int		fibo(int n)
 {
-	int i = 0, j = 1, x;
-	for(x = 0; x < 10; x++)
-	{
-		if (i < j)
-		{
-			printf("%i ", i);
-			i = i + j;
-		}
-		else
-		{
-			printf("%i ", j);
-			j = i + j;
-		}
-	}
+	if (n == 0 || n == 1)
+		return(n);
+	else
+		return(fibo(n - 1) + fibo(n - 2));
+}
+
+int		main()
+{
+	for (int i = 0; i < 10; i++)
+		printf("%d ", fibo(i));
+	return(0);
 }
