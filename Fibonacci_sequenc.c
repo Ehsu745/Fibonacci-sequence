@@ -16,4 +16,5 @@ int		main ()
 			j = i + j;
 		}
 	}
+	return(0);
 }
